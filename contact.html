@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+    <head>
+        <title>Intership</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    </head>
+    <body>
+     <header id="header" style="height:120px;">
+
+        <div class="logo"><h1><img src="Images/ori_3801289_eu2o5l9dvtd2qpp33jozd2pcywym1j75oodq8j6g_monogram-md-logo-design.jpg" alt="logo" width="100px" height="80px"/></h1></div>
+                
+            <div class="Navbar">                
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Activity.html">Activity</a></li>
+                        <li><a href="Blog.html">Blog</a></li>
+                        <li><a href="contact.html" class="current">Contact</a></li>
+                    </ul>
+            </div>
+        </header>
+        <div class="border-bottom"></div>
+
+        <div class="section-e">
+            <h2>contact Me</h2>
+            <div class="line"></div>
+            <h3>Here is how you can reach me</h3>
+        </div>
+        <div id="form-container">
+        <form onsubmit="event.preventDefault()">
+            <div class="text-fields">
+                <div class="form-content">
+                    <input type="text" class="text-input name-input" pattern="[a-zA-Z].{2,}"
+                        title="Must be alphbets only,minimum 3 " required>
+                    <label>Name</label>
+                </div>
+                <div class="form-content">
+
+                    <input type="text" class="text-input subject-input" required>
+                    <label>Subject</label>
+                </div>
+                <div class="form-content">
+
+                    <input type="email" class="text-input email-input"
+                        title="Email format must be ___@___.__"
+                        required>
+                        <!-- pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" -->
+                    <label>Email</label>
+                </div>
+                <div class="form-content">
+
+                    <input type="text" class="text-input phone-input" 
+                        title="Exactly 10 digits  " required>
+                        <!-- pattern="[0-9]{10,10}" -->
+                    <label> Phone No</label>
+                </div>
+
+                <textarea class="text-input message-input" placeholder="Enter Message" required></textarea>
+
+            </div>
+            <button type="submit" class="btn-dark">Submit</button>
+        </form>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-div">
+            <div>Company </div><div class="footerLine"></div>
+            <div>Near, 204 Copper Leaf,
+                Opp. Parshwanath Jain Mandir,
+                AEC Char Rasta, Bhuyangdev, 
+                Ahmedabad, Gujarat 380061</div>
+        </div>
+
+        <div class="footer-div">
+        <div >Navigate</div>
+        <div class="footerLine"></div>
+
+        <div class="footer-link">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Activity</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Project</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        </div>
+
+        <div class="footer-div">
+            <div>Follow Me</div>
+            <div class="footerLine"></div>
+            
+            <div class="social-icon">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <div class="contact-info">
+                <div>
+                    <i class="fas fa-envelope fa-2x"></i>
+                    <h3>Email</h3>
+                    <a href="#" class="btn-dark">mehul@gmail.com</a>
+
+                </div>
+                <div>
+                    <i class="fas fa-phone fa-2x"></i>
+                    <h3>Phone</h3>
+                    <a href="#" class="btn-dark">+91 5555566655</a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script>
+        const labels = document.querySelectorAll( "label" );
+
+        labels.forEach( function( label ) {
+            label.innerHTML = label.innerText
+                .split( "" )
+                .map(function(letter, idx){
+            return `<span style='transition-delay:${idx * 80}ms'>${letter}</span>`
+        })
+                .join( "" );
+        } );
+    </script>
+    </body>
+</html>
